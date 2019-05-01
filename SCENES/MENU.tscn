@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://IMAGES/background.jpg" type="Texture" id=1]
+[ext_resource path="res://IMAGES/game_title.png" type="Texture" id=2]
+[ext_resource path="res://SCRIPTS/BUTTOMS.gd" type="Script" id=3]
+[ext_resource path="res://IMAGES/BUTTOMS/START_BUTTOM/start_idle.png" type="Texture" id=4]
+[ext_resource path="res://IMAGES/BUTTOMS/START_BUTTOM/start_hover.png" type="Texture" id=5]
+[ext_resource path="res://IMAGES/BUTTOMS/CREDITS_BUTTOM/credits_idle.png" type="Texture" id=6]
+[ext_resource path="res://IMAGES/BUTTOMS/CREDITS_BUTTOM/credits_hover.png" type="Texture" id=7]
+[ext_resource path="res://IMAGES/BUTTOMS/QUIT_BUTTOM/quit_idle.png" type="Texture" id=8]
+[ext_resource path="res://IMAGES/BUTTOMS/QUIT_BUTTOM/quit_hover.png" type="Texture" id=9]
+
+[node name="MAIN_MENU" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="BACKGROUND" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="GAME_TITLE" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -202.0
+margin_top = -180.0
+margin_right = 198.0
+margin_bottom = -124.0
+texture = ExtResource( 2 )
+
+[node name="BUTTOMS" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+
+[node name="START" type="TextureButton" parent="BUTTOMS"]
+margin_left = 68.0
+margin_top = 250.0
+margin_right = 187.0
+margin_bottom = 285.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 5 )
+expand = true
+
+[node name="CREDITS" type="TextureButton" parent="BUTTOMS"]
+margin_left = 49.1855
+margin_top = 318.282
+margin_right = 219.186
+margin_bottom = 352.282
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+expand = true
+
+[node name="QUIT" type="TextureButton" parent="BUTTOMS"]
+margin_left = 80.0
+margin_top = 380.0
+margin_right = 174.0
+margin_bottom = 416.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 9 )
+expand = true
+[connection signal="pressed" from="BUTTOMS/START" to="BUTTOMS" method="_on_START_pressed"]
+[connection signal="pressed" from="BUTTOMS/CREDITS" to="BUTTOMS" method="_on_CREDITS_pressed"]
+[connection signal="pressed" from="BUTTOMS/QUIT" to="BUTTOMS" method="_on_QUIT_pressed"]

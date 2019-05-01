@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://BLOCKS/SINGLE_SPIKE.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="ConvexPolygonShape" id=2]
+points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
+
+[node name="SPIKE_MOVING" type="KinematicBody"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
+
+[node name="SPIKE1" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.826284, -0.0290992, -0.865254 )
+
+[node name="SPIKE2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, 0.830145, -0.0334885, -0.865254 )
+
+[node name="SPIKE3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.0232308, -0.0347246, -0.865254 )
+
+[node name="SPIKE4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.833099, -0.0290992, 0.844707 )
+
+[node name="SPIKE5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.822254, -0.0290992, 0 )
+
+[node name="SPIKE6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.030045, -0.0297141, 0.844707 )
+
+[node name="SPIKE7" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, 0.834176, -0.03473, 0 )
+
+[node name="SPIKE8" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, 0.823331, -0.0314732, 0.844707 )
+
+[node name="SPIKE9" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.0192001, -0.0350931, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.000589246, -0.259792, 0.965665, -0.00239027, 0.965662, 0.259793, -0.999997, -0.00246128, -5.19596e-005, 4.67287, 2.21223, -0.00548059 )

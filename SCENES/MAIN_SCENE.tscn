@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://SCENES/LEVEL_01.tscn" type="PackedScene" id=1]
+[ext_resource path="res://SCENES/PLAYER.tscn" type="PackedScene" id=2]
+[ext_resource path="res://BLOCKS/SPIKE_MOVING.tscn" type="PackedScene" id=3]
+[ext_resource path="res://BLOCKS/PLATFORM_HORIZONTAL.tscn" type="PackedScene" id=4]
+[ext_resource path="res://BLOCKS/PLATFORM_VERTICAL.tscn" type="PackedScene" id=5]
+
+[node name="WORLD" type="Spatial"]
+
+[node name="GROUND" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.8, 0, 0, 0, 1, 0, 0, 0, 0.8, 0, 0, 0 )
+
+[node name="PLAYER" parent="." instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.04114, 0 )
+visible = false
+
+[node name="CAMERA" type="Camera" parent="."]
+transform = Transform( 0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 25, 27, 26 )
+
+[node name="SPIKE_MOVING" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.04111, 0 )
+
+[node name="PLATFORM_HORIZONTAL" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.04538, -13 )
+
+[node name="PLATFORM_VERTICAL" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.04049, 12 )
