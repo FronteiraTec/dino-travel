@@ -15,8 +15,13 @@ _global_script_class_icons={
 
 [application]
 
-config/name="001"
+config/name="001_DK"
 run/main_scene="res://SCENES/MAIN_SCENE.tscn"
+
+[autoload]
+
+PLAYER="*res://SCRIPTS/PLAYER.gd"
+ITEM="*res://SCRIPTS/ITEM_MOVE.gd"
 
 [input]
 

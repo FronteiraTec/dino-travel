@@ -14,5 +14,4 @@ func _physics_process(delta):
 	if motion.y < limit_inferior: speed *= -1
 	elif motion.y > limit_superior: speed *= -1
 
-	print(motion.y)
 	motion = move_and_slide(motion)

@@ -1,0 +1,101 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://BLOCKS/STANDARD_CUBE.tscn" type="PackedScene" id=1]
+
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.505882, 0.27451, 0.921569, 1 )
+
+[node name="LEVEL_03" type="Spatial"]
+
+[node name="GROUND" type="Spatial" parent="."]
+editor/display_folded = true
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+
+[node name="0" parent="GROUND" instance=ExtResource( 1 )]
+material/0 = SubResource( 1 )
+
+[node name="1" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+material/0 = SubResource( 1 )
+
+[node name="2" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
+material/0 = SubResource( 1 )
+
+[node name="3" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4 )
+material/0 = SubResource( 1 )
+
+[node name="4" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6 )
+material/0 = SubResource( 1 )
+
+[node name="5" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 8 )
+material/0 = SubResource( 1 )
+
+[node name="6" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8 )
+material/0 = SubResource( 1 )
+
+[node name="7" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 8 )
+material/0 = SubResource( 1 )
+
+[node name="8" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 10 )
+material/0 = SubResource( 1 )
+
+[node name="9" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 12 )
+material/0 = SubResource( 1 )
+
+[node name="10" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 12 )
+material/0 = SubResource( 1 )
+
+[node name="11" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12 )
+material/0 = SubResource( 1 )
+
+[node name="12" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 12 )
+material/0 = SubResource( 1 )
+
+[node name="13" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 14 )
+material/0 = SubResource( 1 )
+
+[node name="14" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 16 )
+material/0 = SubResource( 1 )
+
+[node name="15" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16 )
+material/0 = SubResource( 1 )
+
+[node name="16" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 16 )
+material/0 = SubResource( 1 )
+
+[node name="17" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 18 )
+material/0 = SubResource( 1 )
+
+[node name="18" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 20 )
+material/0 = SubResource( 1 )
+
+[node name="19" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )
+material/0 = SubResource( 1 )
+
+[node name="20" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22 )
+material/0 = SubResource( 1 )
+
+[node name="21" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24 )
+material/0 = SubResource( 1 )
+

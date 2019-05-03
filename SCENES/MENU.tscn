@@ -71,6 +71,7 @@ texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
 texture_hover = ExtResource( 9 )
 expand = true
+
 [connection signal="pressed" from="BUTTOMS/START" to="BUTTOMS" method="_on_START_pressed"]
 [connection signal="pressed" from="BUTTOMS/CREDITS" to="BUTTOMS" method="_on_CREDITS_pressed"]
 [connection signal="pressed" from="BUTTOMS/QUIT" to="BUTTOMS" method="_on_QUIT_pressed"]

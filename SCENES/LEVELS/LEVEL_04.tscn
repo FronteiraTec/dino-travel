@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://BLOCKS/PLATFORM_HORIZONTAL_LEFT.tscn" type="PackedScene" id=1]
+[ext_resource path="res://BLOCKS/PLATFORM_HORIZONTAL_RIGHT.tscn" type="PackedScene" id=2]
+
+[node name="LEVEL_04" type="Spatial"]
+
+[node name="GROUND" type="Spatial" parent="."]
+
+[node name="HORIZONTAL_LEFT" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( -2.18557e-07, 0, -2, 0, 1, 0, 5, 0, -8.74228e-08, 0.0246537, 0, 0 )
+
+[node name="HORIZONTAL_LEFT2" parent="GROUND" instance=ExtResource( 1 )]
+transform = Transform( -2.18557e-07, 0, -2, 0, 1, 0, 5, 0, -8.74228e-08, 8.08926, 0, 0 )
+
+[node name="HORIZONTAL_RIGHT" parent="GROUND" instance=ExtResource( 2 )]
+transform = Transform( -2.18557e-07, 0, -2, 0, 1, 0, 5, 0, -8.74228e-08, 4.0587, 0, 0 )
+
+[node name="HORIZONTAL_RIGHT2" parent="GROUND" instance=ExtResource( 2 )]
+transform = Transform( -2.18557e-07, 0, -2, 0, 1, 0, 5, 0, -8.74228e-08, 12.118, 0, 0 )
+
