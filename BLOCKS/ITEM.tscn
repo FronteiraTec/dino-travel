@@ -23,7 +23,7 @@ script = ExtResource( 1 )
 transform = Transform( 0.975729, 0, 0, 0, 0.975729, 0, 0, 0, 0.975729, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="KinematicBody" type="KinematicBody" parent="."]
+[node name="KinematicBody" type="RigidBody" parent="."]
 script = ExtResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="KinematicBody"]
@@ -32,5 +32,4 @@ material/0 = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
 shape = SubResource( 4 )
-
 [connection signal="body_entered" from="Area" to="Area" method="_on_Area_body_entered"]

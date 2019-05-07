@@ -1,4 +1,4 @@
-extends Area
+extends Button
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -13,9 +13,5 @@ func _ready():
 #	pass
 
 
-func _on_Area_body_entered(body):
-	if body is RigidBody:
-		PLAT_LEFT.motion.y = 0
-		PLAT_LEFT.speed = 0
-		
-		print(PLAT_LEFT.motion[2])
+func _on_RETRY_pressed():
+	get_tree().change_scene('res://SCENES/MAIN_SCENE.tscn')

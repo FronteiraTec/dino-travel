@@ -21,4 +21,3 @@ shape = SubResource( 1 )
 [node name="MeshInstance" type="MeshInstance" parent="KinematicBody"]
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
-

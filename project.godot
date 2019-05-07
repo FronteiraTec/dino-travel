@@ -22,6 +22,12 @@ run/main_scene="res://SCENES/MAIN_SCENE.tscn"
 
 PLAYER="*res://SCRIPTS/PLAYER.gd"
 ITEM="*res://SCRIPTS/ITEM_MOVE.gd"
+PLAT_LEFT="*res://SCRIPTS/PLATFORM_HORIZONTAL_LEFT.gd"
+PLAT_RIGHT="*res://SCRIPTS/PLATFORM_HORIZONTAL_RIGHT.gd"
+
+[display]
+
+window/vsync/use_vsync=false
 
 [input]
 
@@ -38,4 +44,5 @@ right={
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 environment/default_environment="res://default_env.tres"

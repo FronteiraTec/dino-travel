@@ -1,5 +1,6 @@
 extends Control
 
+
 func _ready():
 	# START BUTTOM
 	$"START"
@@ -18,10 +19,12 @@ func _physics_process(delta):
 
 
 func _on_START_pressed():
-	get_tree().change_scene('res://SCENES/MAIN_SCENE.tscn')
+	get_tree().change_scene('res://SCENES/LEVEL_SELECTION.tscn')
+
 
 func _on_CREDITS_pressed():
 	get_tree().change_scene('res://SCENES/CREDITS.tscn')
+
 
 func _on_QUIT_pressed():
 	get_tree().quit()

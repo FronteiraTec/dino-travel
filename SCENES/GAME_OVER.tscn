@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://SCENES/LEVEL_SELECTION.gd" type="Script" id=1]
+[ext_resource path="res://SCRIPTS/GAME_OVER_RETRY.gd" type="Script" id=2]
+[ext_resource path="res://SCRIPTS/GAME_OVER_QUIT.gd" type="Script" id=3]
+
+[node name="GAME_OVER" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 490.0
+margin_top = 190.0
+margin_right = 568.0
+margin_bottom = 204.0
+text = "GAME_OVER"
+
+[node name="LEVEL_SELECTION" type="Button" parent="."]
+margin_left = 470.0
+margin_top = 300.0
+margin_right = 591.0
+margin_bottom = 330.0
+text = "LEVEL SELECTION"
+flat = true
+script = ExtResource( 1 )
+
+[node name="RETRY" type="Button" parent="."]
+margin_left = 480.0
+margin_top = 340.0
+margin_right = 580.0
+margin_bottom = 390.0
+text = "RETRY?"
+flat = true
+script = ExtResource( 2 )
+
+[node name="QUIT" type="Button" parent="."]
+margin_left = 506.684
+margin_top = 400.158
+margin_right = 551.684
+margin_bottom = 420.158
+text = "QUIT"
+flat = true
+script = ExtResource( 3 )
+[connection signal="pressed" from="LEVEL_SELECTION" to="LEVEL_SELECTION" method="_on_LEVEL_SELECTION_pressed"]
+[connection signal="pressed" from="RETRY" to="RETRY" method="_on_RETRY_pressed"]
+[connection signal="pressed" from="QUIT" to="QUIT" method="_on_QUIT_pressed"]

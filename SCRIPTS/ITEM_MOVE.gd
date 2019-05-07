@@ -1,4 +1,4 @@
-extends KinematicBody
+extends RigidBody
 
 var stop = 0
 var go = 100
@@ -13,5 +13,5 @@ func _process(delta):
 	move.y = stop
 	
 	
-	move = move_and_slide(move)
+#	move = move_and_slide(move)s
 

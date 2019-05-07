@@ -6,7 +6,7 @@ var move = 1
 const GRAVITY = -10
 const speed = 120
 const stop = 0
-const time_to_move = 30
+const time_to_move = 20
 
 var right 	 = false
 var left 	 = false
@@ -87,8 +87,9 @@ func _physics_process(delta):
 		rotate_y(deg2rad(-90))
 
 	# reset the variable due to memory resources
-	if move > 1000: move = 0
-	else: move += 1
+#	if move > 1000: move = 0
+#	else: 
+	move += 1
 
 
 	motion = move_and_slide(motion)
