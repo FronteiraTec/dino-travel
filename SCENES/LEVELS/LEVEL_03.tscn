@@ -2,7 +2,6 @@
 
 [ext_resource path="res://BLOCKS/STANDARD_CUBE.tscn" type="PackedScene" id=1]
 
-
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.505882, 0.27451, 0.921569, 1 )
 
@@ -98,4 +97,3 @@ material/0 = SubResource( 1 )
 [node name="21" parent="GROUND" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24 )
 material/0 = SubResource( 1 )
-

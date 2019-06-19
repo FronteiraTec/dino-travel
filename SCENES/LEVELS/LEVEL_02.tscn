@@ -13,4 +13,3 @@ points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1,
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody2"]
 shape = SubResource( 1 )
-

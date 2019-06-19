@@ -1,5 +1,6 @@
 extends KinematicBody
 
+# makes the spikes go up and down
 var motion = Vector3()
 var speed = -0.1
 var limit_inferior = -3

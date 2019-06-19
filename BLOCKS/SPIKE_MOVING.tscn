@@ -42,6 +42,3 @@ transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, 0.823331, -0.0314732, 0.
 
 [node name="SPIKE9" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.0192001, -0.0350931, 0 )
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.000589246, -0.259792, 0.965665, -0.00239027, 0.965662, 0.259793, -0.999997, -0.00246128, -5.19596e-005, 4.67287, 2.21223, -0.00548059 )

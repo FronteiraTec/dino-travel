@@ -1,5 +1,6 @@
 extends Area
 
+# function which detects if player have passed through the block and then delete it
 var contvidro = 0
 
 func _ready():
