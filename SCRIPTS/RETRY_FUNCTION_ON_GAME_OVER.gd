@@ -5,4 +5,4 @@ func _ready():
 	pass
 
 func _on_RETRY_pressed():
-	get_tree().change_scene('res://SCENES/UI/MAIN_SCENE.tscn')
+	get_tree().change_scene('res://SCENES/MAIN_SCENE.tscn')

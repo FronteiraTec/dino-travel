@@ -35,7 +35,7 @@ transform = Transform( 53.35, 0, 0, 0, 1, 0, 0, 0, 13.35, -1, -4.49596, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.504042, 0 )
 
 [node name="PLAYER" parent="." instance=ExtResource( 8 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -42, 2.04211, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -42, 1.04085, 0 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -3.84903e-08, 0.473944, -0.880555, 2.07167e-08, 0.880555, 0.473944, 1, 0, -4.37114e-08, -49.3557, 8.97923, 0 )
