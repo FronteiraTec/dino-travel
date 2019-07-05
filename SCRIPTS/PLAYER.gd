@@ -3,11 +3,10 @@ extends KinematicBody
 var motion = Vector3()
 var move = 1
 
-
 const GRAVITY = -10
-const speed = 120
+const speed = 6#120
 const stop = 0
-const time_to_move = 20
+const time_to_move = 1#20
 
 var right 	 = false
 var left 	 = false
@@ -15,9 +14,6 @@ var forward  = false
 var backward = true
 
 
-func _ready():
-	pass
-	
 func _physics_process(delta):
 	motion.x = stop
 	motion.y = GRAVITY
@@ -82,6 +78,4 @@ func _physics_process(delta):
 		rotate_y(deg2rad(-90))
 
 	move += 1
-
-
 	motion = move_and_slide(motion)
