@@ -16,14 +16,14 @@ _global_script_class_icons={
 [application]
 
 config/name="001_DK"
-run/main_scene="res://SCENES/MAIN_SCENE.tscn"
+run/main_scene="res://SCENES/UI/MENU.tscn"
 
 [autoload]
 
 PLAYER="*res://SCRIPTS/PLAYER.gd"
-ITEM="*res://SCRIPTS/ITEM_MOVE.gd"
 PLAT_LEFT="*res://SCRIPTS/PLATFORM_HORIZONTAL_LEFT.gd"
 PLAT_RIGHT="*res://SCRIPTS/PLATFORM_HORIZONTAL_RIGHT.gd"
+BURACO="*res://SCRIPTS/BURACO.gd"
 
 [display]
 
