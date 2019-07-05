@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://BLOCKS/SINGLE_SPIKE.tscn" type="PackedScene" id=1]
+[ext_resource path="res://BLOCKS/Area.gd" type="Script" id=2]
 
 [sub_resource type="CubeMesh" id=1]
 
 [sub_resource type="ConvexPolygonShape" id=2]
 points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
+
+[sub_resource type="BoxShape" id=3]
 
 [node name="SPIKE_MOVING" type="KinematicBody"]
 
@@ -17,28 +20,109 @@ material/0 = null
 shape = SubResource( 2 )
 
 [node name="SPIKE1" parent="." instance=ExtResource( 1 )]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.826284, -0.0290992, -0.865254 )
 
+[node name="Area" type="Area" parent="SPIKE1"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="SPIKE1/Area"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0 )
+shape = SubResource( 3 )
+
 [node name="SPIKE2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, 0.830145, -0.0334885, -0.865254 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, 0.0153471, -0.0290992, -0.865254 )
+
+[node name="Area" type="Area" parent="SPIKE2"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="SPIKE2/Area"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0 )
+shape = SubResource( 3 )
 
 [node name="SPIKE3" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.0232308, -0.0347246, -0.865254 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, 0.824405, -0.0290992, -0.865254 )
+
+[node name="Area" type="Area" parent="SPIKE3"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="SPIKE3/Area"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0 )
+shape = SubResource( 3 )
 
 [node name="SPIKE4" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.833099, -0.0290992, 0.844707 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, 0.0153471, -0.0290992, 0.0239498 )
+
+[node name="Area" type="Area" parent="SPIKE4"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="SPIKE4/Area"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0 )
+shape = SubResource( 3 )
 
 [node name="SPIKE5" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.822254, -0.0290992, 0 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.826284, -0.0290992, 0.0239498 )
+
+[node name="Area" type="Area" parent="SPIKE5"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="SPIKE5/Area"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0 )
+shape = SubResource( 3 )
 
 [node name="SPIKE6" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.030045, -0.0297141, 0.844707 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, 0.824405, -0.0290992, 0.0239498 )
+
+[node name="Area" type="Area" parent="SPIKE6"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="SPIKE6/Area"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0 )
+shape = SubResource( 3 )
 
 [node name="SPIKE7" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, 0.834176, -0.03473, 0 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.826284, -0.0290992, 0.8801 )
+
+[node name="Area" type="Area" parent="SPIKE7"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="SPIKE7/Area"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0 )
+shape = SubResource( 3 )
 
 [node name="SPIKE8" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, 0.823331, -0.0314732, 0.844707 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, 0.824405, -0.0290992, 0.8801 )
+
+[node name="Area" type="Area" parent="SPIKE8"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="SPIKE8/Area"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0 )
+shape = SubResource( 3 )
 
 [node name="SPIKE9" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, -0.0192001, -0.0350931, 0 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 0.94359, 0, 0, 0, 1, 0.0153471, -0.0290992, 0.8801 )
+
+[node name="Area" type="Area" parent="SPIKE9"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="SPIKE9/Area"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0 )
+shape = SubResource( 3 )
+[connection signal="body_entered" from="SPIKE1/Area" to="SPIKE1/Area" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="SPIKE2/Area" to="SPIKE2/Area" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="SPIKE3/Area" to="SPIKE3/Area" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="SPIKE4/Area" to="SPIKE4/Area" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="SPIKE5/Area" to="SPIKE5/Area" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="SPIKE6/Area" to="SPIKE6/Area" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="SPIKE7/Area" to="SPIKE7/Area" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="SPIKE8/Area" to="SPIKE8/Area" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="SPIKE9/Area" to="SPIKE9/Area" method="_on_Area_body_entered"]
