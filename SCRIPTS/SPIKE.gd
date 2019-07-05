@@ -2,9 +2,9 @@ extends KinematicBody
 
 # makes the spikes go up and down
 var motion = Vector3()
-var speed = -0.1
-var limit_inferior = -3
-var limit_superior = +3
+var speed = -0.01
+var limit_inferior = -1
+var limit_superior = +1
 
 func _ready():
 	pass
