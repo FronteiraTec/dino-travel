@@ -1,0 +1,6 @@
+shadows are pixeladed
+retry function do not restart the level but goes to level_selectoin.tscn
+to invert camera rotation each time player rotate
+create more levels
+fix fire animation (seems stopped)
+modify text containers, to scale with the screen
