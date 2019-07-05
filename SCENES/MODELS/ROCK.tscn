@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://MODELS/PROPS/rock.dae" type="PackedScene" id=1]
 [ext_resource path="res://MODELS/TEXTURES/rockcolor.png" type="Texture" id=2]
+[ext_resource path="res://SCENES/death_area.tscn" type="PackedScene" id=3]
+[ext_resource path="res://BLOCKS/STANDARD_CUBE.tscn" type="PackedScene" id=4]
 
 [sub_resource type="SpatialMaterial" id=1]
 flags_unshaded = true
@@ -11,3 +13,8 @@ albedo_texture = ExtResource( 2 )
 
 [node name="Cube" parent="." index="0"]
 material/0 = SubResource( 1 )
+
+[node name="death_area" parent="Cube" index="0" instance=ExtResource( 3 )]
+
+[node name="MeshInstance" parent="." index="2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
