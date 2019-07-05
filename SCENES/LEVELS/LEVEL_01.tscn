@@ -1,40 +1,77 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://BLOCKS/STANDARD_CUBE.tscn" type="PackedScene" id=1]
-[ext_resource path="res://BLOCKS/GAME_OVER_HITBOX.tscn" type="PackedScene" id=2]
-[ext_resource path="res://SCENES/WIN_AREA.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SCENES/MODELS/TREEROUNDY.tscn" type="PackedScene" id=1]
+[ext_resource path="res://SCENES/MODELS/TREEPALM.tscn" type="PackedScene" id=2]
+[ext_resource path="res://BLOCKS/STANDARD_CUBE.tscn" type="PackedScene" id=3]
 [ext_resource path="res://SCENES/MODELS/PLAYER.tscn" type="PackedScene" id=4]
+[ext_resource path="res://BLOCKS/GAME_OVER_HITBOX.tscn" type="PackedScene" id=5]
+[ext_resource path="res://SCENES/UI/WIN_AREA.tscn" type="PackedScene" id=6]
 
 [node name="LEVEL_01" type="Spatial"]
 
-[node name="ground" type="Spatial" parent="."]
+[node name="GROUND" type="Spatial" parent="."]
+editor/display_folded = true
 
-[node name="b1" parent="ground" instance=ExtResource( 1 )]
+[node name="TREES" type="Spatial" parent="GROUND"]
+editor/display_folded = true
 
-[node name="b2" parent="ground" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
+[node name="ROUNDY" type="Spatial" parent="GROUND/TREES"]
 
-[node name="b3" parent="ground" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0 )
+[node name="TREE_ROUNDY" parent="GROUND/TREES/ROUNDY" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, 0 )
 
-[node name="b4" parent="ground" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0 )
+[node name="TREE_ROUNDY2" parent="GROUND/TREES/ROUNDY" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, 2 )
 
-[node name="b5" parent="ground" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0 )
+[node name="TREE_ROUNDY3" parent="GROUND/TREES/ROUNDY" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, 4 )
 
-[node name="b6" parent="ground" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0 )
+[node name="TREE_ROUNDY4" parent="GROUND/TREES/ROUNDY" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, 6 )
 
-[node name="BURACO" parent="ground" instance=ExtResource( 2 )]
-transform = Transform( 18.15, 0, 0, 0, 1, 0, 0, 0, 7.8, -5, -4, 0 )
+[node name="PALM" type="Spatial" parent="GROUND/TREES"]
+editor/display_folded = true
 
-[node name="WIN AREA" parent="ground" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+[node name="TREE_PALM" parent="GROUND/TREES/PALM" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6, 1, 8 )
+
+[node name="TREE_PALM2" parent="GROUND/TREES/PALM" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 1, 8 )
+
+[node name="TREE_PALM3" parent="GROUND/TREES/PALM" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 1, 8 )
+
+[node name="FLOOR" type="Spatial" parent="GROUND"]
+editor/display_folded = true
+
+[node name="b1" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 6 )
+
+[node name="b2" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4 )
+
+[node name="b3" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2 )
+
+[node name="b4" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0 )
+
+[node name="b5" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0 )
+
+[node name="b6" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0 )
+
+[node name="b7" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+
+[node name="b8" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
 
 [node name="PLAYER" parent="." instance=ExtResource( 4 )]
-transform = Transform( -5.96046e-08, 0, 1, -1.49012e-08, 1, 1.49012e-08, -1, 0, -2.98023e-08, -10, 1.04319, -4.76837e-07 )
+transform = Transform( -2.3445e-07, 0, 1, -1.49012e-08, 1, 1.49012e-08, -1, 0, -2.04648e-07, 0, 1.04319, -4.76837e-07 )
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.707107, 0.241845, -0.664463, 1.49502e-08, 0.939693, 0.34202, 0.707107, -0.241845, 0.664463, -13, 4, 4 )
-current = true
+[node name="BURACO" parent="." instance=ExtResource( 5 )]
+transform = Transform( 18.15, 0, 0, 0, 1, 0, 0, 0, 7.8, 9, -4, 0 )
+
+[node name="WIN AREA" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, 7 )
