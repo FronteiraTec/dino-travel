@@ -1,19 +1,19 @@
 [gd_scene load_steps=4 format=2]
 
-[sub_resource type="SpatialMaterial" id=3]
-albedo_color = Color( 0.164706, 0.45098, 0.752941, 1 )
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.941176, 0.596078, 0.384314, 1 )
 
-[sub_resource type="CubeMesh" id=1]
-material = SubResource( 3 )
+[sub_resource type="CubeMesh" id=4]
+material = SubResource( 5 )
 
-[sub_resource type="ConvexPolygonShape" id=2]
+[sub_resource type="ConvexPolygonShape" id=3]
 points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
 
 [node name="MeshInstance" type="MeshInstance"]
-mesh = SubResource( 1 )
+mesh = SubResource( 4 )
 material/0 = null
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-shape = SubResource( 2 )
+shape = SubResource( 3 )
