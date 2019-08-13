@@ -113,6 +113,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 18 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 22 )
 
 [node name="TREES" type="Spatial" parent="GROUND"]
+editor/display_folded = true
 
 [node name="ROCK2" parent="GROUND/TREES" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 8 )
@@ -149,3 +150,8 @@ transform = Transform( -8.22212e-07, 0, -18.81, 0, 1, 0, 8.9775, 0, -3.92419e-07
 
 [node name="PLAYER" parent="." instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24, 1, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.819152, 0.32899, -0.469846, 0, 0.819152, 0.573577, 0.573576, -0.469846, 0.67101, -19, 7, 7 )
+projection = 1
+size = 15.0
