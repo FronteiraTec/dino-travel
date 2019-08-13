@@ -1,81 +1,80 @@
+#	motion.z = -speed # esquerda
+#	motion.z = +speed # direita
+#	motion.y = -speed # down
+#	motion.y = +speed # up
+#	motion.x = -speed # backward
+#	motion.x = +speed # forward
+
 extends KinematicBody
 
 var motion = Vector3()
-var move = 1
 
 const GRAVITY = -10
-const speed = 6#120
-const stop = 0
-const time_to_move = 1#20
+const speed = 120
 
-var right 	 = false
-var left 	 = false
-var forward  = false
-var backward = true
+var move = false
+var dir = 'forward'
+
+
 
 
 func _physics_process(delta):
-	motion.x = stop
+	motion.x = 0
 	motion.y = GRAVITY
-	motion.z = stop
+	motion.z = 0
 
 
-	if move % time_to_move == 0 and move != 0:
-		if right      == true: motion.z = -speed
-		elif left     == true: motion.z = speed
-		elif forward  == true: motion.x = -speed
-		elif backward == true: motion.x = +speed
+	if move == true:
+		move = false
+		if dir == 'forward':
+			motion.x = +speed # forward
 
-	if Input.is_action_just_pressed('left'):
-		if left == true:
-			right 	 = false
-			left 	 = false
-			forward  = false
-			backward = true
+		elif dir == 'backward':
+			motion.x = -speed # backward
 
-		elif backward == true:
-			right 	 = true
-			left 	 = false
-			forward  = false
-			backward = false	
+		elif dir == 'left':
+			motion.z = -speed # left
 
-		elif right == true:
-			right 	 = false
-			left 	 = false
-			forward  = true
-			backward = false
+		elif dir == 'right':
+			motion.z = +speed # right
 
-		elif forward == true:
-			right 	 = false
-			left 	 = true
-			backward = false
-		rotate_y(deg2rad(90))
+
+
+
+
+	if Input.is_action_just_pressed('ui_forward'):
+		move = true
 
 	elif Input.is_action_just_pressed('right'):
-		if left == true:
-			right 	 = false
-			left 	 = false
-			forward  = true
-			backward = false
-
-		elif backward == true:
-			right 	 = false
-			left 	 = true
-			forward  = false
-			backward = false	
-
-		elif right == true:
-			right 	 = false
-			left 	 = false
-			forward  = false
-			backward = true
-
-		elif forward == true:
-			right 	 = true
-			left 	 = false
-			forward  = false
-			backward = false
+		# play player rotation animation
 		rotate_y(deg2rad(-90))
 
-	move += 1
+		if dir == 'forward':
+			dir = 'right'
+
+		elif dir == 'backward':
+			dir = 'left'
+
+		elif dir == 'left':
+			dir = 'forward'
+
+		elif dir == 'right':
+			dir = 'backward'
+	elif Input.is_action_just_pressed('left'):
+		# play player rotation animation
+		rotate_y(deg2rad(90))
+	
+		if dir == 'forward':
+			dir = 'left'
+			
+		elif dir == 'backward':
+			dir = 'right'
+			
+		elif dir == 'left':
+			dir = 'backward'
+			
+		elif dir == 'right':
+			dir = 'forward'
+
+
 	motion = move_and_slide(motion)
