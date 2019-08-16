@@ -1,7 +1,8 @@
 # Jogo_Mobile FronteiraTec
 
-Keybindings
 
+
+### Keybindings
     'Middle Scroll' = forward;
     'Mouse 1' = right;
     'Mouse 2' = left;
