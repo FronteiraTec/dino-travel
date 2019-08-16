@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 # Apply movement to credits text
-export var up_speed = 30
+export var up_speed = 100
 
 func _ready():
 	pass
