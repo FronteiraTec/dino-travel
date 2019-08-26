@@ -4,5 +4,5 @@
 
 ### Keybindings
     'Middle Scroll' = forward;
-    'Mouse 1' = right;
-    'Mouse 2' = left;
+    'Mouse 1' = turn right;
+    'Mouse 2' = turn left;
