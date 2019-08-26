@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://SCRIPTS/MENU_LEVEL_SELECTION.gd" type="Script" id=1]
-[ext_resource path="res://SCRIPTS/RETRY_FUNCTION_ON_GAME_OVER.gd" type="Script" id=2]
-[ext_resource path="res://SCRIPTS/QUIT_FUNCTION_ON_GAME_OVER.gd" type="Script" id=3]
+[ext_resource path="res://SCRIPTS/UI/MENU_LEVEL_SELECTION.gd" type="Script" id=1]
+[ext_resource path="res://SCRIPTS/UI/RETRY_FUNCTION_ON_GAME_OVER.gd" type="Script" id=2]
+[ext_resource path="res://SCRIPTS/UI/QUIT_FUNCTION_ON_GAME_OVER.gd" type="Script" id=3]
+
 
 [node name="GAME_OVER" type="Control"]
 anchor_right = 1.0

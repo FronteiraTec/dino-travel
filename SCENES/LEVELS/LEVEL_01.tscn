@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://SCENES/MODELS/TREEROUNDY.tscn" type="PackedScene" id=1]
 [ext_resource path="res://SCENES/MODELS/TREEPALM.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://SCENES/MODELS/PLAYER.tscn" type="PackedScene" id=4]
 [ext_resource path="res://BLOCKS/GAME_OVER_HITBOX.tscn" type="PackedScene" id=5]
 [ext_resource path="res://SCENES/UI/WIN_AREA.tscn" type="PackedScene" id=6]
+[ext_resource path="res://SCENES/UI/TIMER.tscn" type="PackedScene" id=7]
 
 [node name="LEVEL_01" type="Spatial"]
 
@@ -86,3 +87,5 @@ size = 15.0
 transform = Transform( -1, 0, 0, 0, 0.819152, 0.573577, 0, 0.573577, -0.819152, 4, 5, 0 )
 projection = 1
 size = 15.0
+
+[node name="Control" parent="." instance=ExtResource( 7 )]

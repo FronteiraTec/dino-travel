@@ -1,7 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://BLOCKS/SINGLE_SPIKE.tscn" type="PackedScene" id=1]
-[ext_resource path="res://SCRIPTS/SPIKE_COLLISION.gd" type="Script" id=2]
+[ext_resource path="res://SCRIPTS/BLOCKS/SPIKE_COLLISION.gd" type="Script" id=2]
+
 
 
 
