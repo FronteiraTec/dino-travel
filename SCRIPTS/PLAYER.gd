@@ -1,10 +1,3 @@
-#	motion.z = -speed # esquerda
-#	motion.z = +speed # direita
-#	motion.y = -speed # down
-#	motion.y = +speed # up
-#	motion.x = -speed # backward
-#	motion.x = +speed # forward
-
 extends KinematicBody
 
 var motion = Vector3()
@@ -14,8 +7,6 @@ const speed = 120
 
 var move = false
 var dir = 'forward'
-
-
 
 
 func _physics_process(delta):
@@ -37,8 +28,6 @@ func _physics_process(delta):
 
 		elif dir == 'right':
 			motion.z = +speed # right
-
-
 
 
 
