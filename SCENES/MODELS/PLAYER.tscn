@@ -12,7 +12,7 @@ extents = Vector3( 0.814764, 1, 0.856445 )
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="player"]
-transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.526699, 0 )
+transform = Transform( 0.40224, 0, 0, 0, 0.5, 0, 0, 0, 0.379258, 0, 0.526699, 0.0668855 )
 shape = SubResource( 1 )
 
 [node name="REX" parent="player" instance=ExtResource( 2 )]
