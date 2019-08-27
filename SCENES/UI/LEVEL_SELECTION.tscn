@@ -3,8 +3,8 @@
 [ext_resource path="res://IMAGES/background_2.jpg" type="Texture" id=1]
 [ext_resource path="res://Merienda-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://SCRIPTS/UI/LEVEL_SELECTION.gd" type="Script" id=3]
-[ext_resource path="res://IMAGES/LEVEL_1.png" type="Texture" id=4]
-[ext_resource path="res://IMAGES/LEVEL_2.png" type="Texture" id=5]
+[ext_resource path="res://IMAGES/THUMBNAILS/LEVEL_1.png" type="Texture" id=4]
+[ext_resource path="res://IMAGES/THUMBNAILS/LEVEL_2.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -30,7 +30,6 @@ custom_fonts/font = SubResource( 1 )
 text = "LEVEL SELECTION"
 
 [node name="BOTOES" type="Control" parent="."]
-editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 3 )
@@ -63,7 +62,6 @@ expand = true
 stretch_mode = 5
 
 [node name="LEVEL 2" type="Button" parent="BOTOES"]
-editor/display_folded = true
 margin_left = 280.0
 margin_top = 190.0
 margin_right = 350.0
