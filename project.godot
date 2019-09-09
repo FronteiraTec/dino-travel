@@ -17,7 +17,6 @@ _global_script_class_icons={
 
 config/name="DINO_PUZZLE"
 run/main_scene="res://SCENES/UI/MENU.tscn"
-boot_splash/bg_color=Color( 0.462745, 0.462745, 0.462745, 1 )
 
 [autoload]
 
@@ -29,7 +28,6 @@ BURACO="*res://SCRIPTS/BURACO.gd"
 [debug]
 
 settings/fps/force_fps=60
-settings/stdout/print_fps=true
 shapes/collision/shape_color=Color( 0, 0.6, 0.701961, 0.501961 )
 shapes/collision/contact_color=Color( 1, 0.2, 0.101961, 0.8 )
 
