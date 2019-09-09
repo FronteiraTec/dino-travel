@@ -1,91 +1,93 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://SCENES/MODELS/TREEROUNDY.tscn" type="PackedScene" id=1]
-[ext_resource path="res://SCENES/MODELS/TREEPALM.tscn" type="PackedScene" id=2]
-[ext_resource path="res://BLOCKS/STANDARD_CUBE.tscn" type="PackedScene" id=3]
-[ext_resource path="res://SCENES/MODELS/PLAYER.tscn" type="PackedScene" id=4]
-[ext_resource path="res://BLOCKS/GAME_OVER_HITBOX.tscn" type="PackedScene" id=5]
-[ext_resource path="res://SCENES/UI/WIN_AREA.tscn" type="PackedScene" id=6]
-[ext_resource path="res://SCENES/UI/TIMER.tscn" type="PackedScene" id=7]
+[ext_resource path="res://SCENES/MODELS/PLAYER.tscn" type="PackedScene" id=1]
+[ext_resource path="res://BLOCKS/STANDARD_CUBE.tscn" type="PackedScene" id=2]
+[ext_resource path="res://SCENES/UI/WIN_AREA.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SCENES/death_area.tscn" type="PackedScene" id=4]
 
-[node name="LEVEL_01" type="Spatial"]
+[sub_resource type="CubeMesh" id=1]
 
-[node name="GROUND" type="Spatial" parent="."]
+[node name="LEVEL 01" type="Spatial"]
+
+[node name="PLAYER" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 1.04108, -2 )
+
+[node name="ground" type="Spatial" parent="."]
 editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -4 )
 
-[node name="TREES" type="Spatial" parent="GROUND"]
-editor/display_folded = true
+[node name="0" parent="ground" instance=ExtResource( 2 )]
 
-[node name="ROUNDY" type="Spatial" parent="GROUND/TREES"]
+[node name="3" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
 
-[node name="TREE_ROUNDY" parent="GROUND/TREES/ROUNDY" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, 0 )
+[node name="8" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4 )
 
-[node name="TREE_ROUNDY2" parent="GROUND/TREES/ROUNDY" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, 2 )
+[node name="9" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 0 )
 
-[node name="TREE_ROUNDY3" parent="GROUND/TREES/ROUNDY" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, 4 )
+[node name="12" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, 0 )
 
-[node name="TREE_ROUNDY4" parent="GROUND/TREES/ROUNDY" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, 6 )
-
-[node name="PALM" type="Spatial" parent="GROUND/TREES"]
-editor/display_folded = true
-
-[node name="TREE_PALM" parent="GROUND/TREES/PALM" instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6, 1, 8 )
-
-[node name="TREE_PALM2" parent="GROUND/TREES/PALM" instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 1, 8 )
-
-[node name="TREE_PALM3" parent="GROUND/TREES/PALM" instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 1, 8 )
-
-[node name="FLOOR" type="Spatial" parent="GROUND"]
-editor/display_folded = true
-
-[node name="b1" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 6 )
-
-[node name="b2" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4 )
-
-[node name="b3" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2 )
-
-[node name="b4" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0 )
-
-[node name="b5" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0 )
-
-[node name="b6" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0 )
-
-[node name="b7" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
+[node name="1" parent="ground" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
 
-[node name="b8" parent="GROUND/FLOOR" instance=ExtResource( 3 )]
+[node name="4" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2 )
 
-[node name="PLAYER" parent="." instance=ExtResource( 4 )]
-transform = Transform( -2.3445e-07, 0, 1, -1.49012e-08, 1, 1.49012e-08, -1, 0, -2.04648e-07, 0, 1.04319, -4.76837e-07 )
+[node name="7" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4 )
 
-[node name="BURACO" parent="." instance=ExtResource( 5 )]
-transform = Transform( 18.15, 0, 0, 0, 1, 0, 0, 0, 7.8, 9, -4, 0 )
+[node name="10" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, -2 )
 
-[node name="WIN AREA" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, 7 )
+[node name="14" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, -2 )
+
+[node name="2" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0 )
+
+[node name="5" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2 )
+
+[node name="6" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4 )
+
+[node name="11" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, -4 )
+
+[node name="16" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, -6 )
+
+[node name="13" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, -4 )
+
+[node name="15" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, -6 )
+
+[node name="17" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 0, -6 )
+
+[node name="18" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 0, 0 )
+
+[node name="19" parent="ground" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, -2 )
+
+[node name="WIN_AREA" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8, 1.54235, 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="WIN_AREA"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.98529, 0 )
+mesh = SubResource( 1 )
+material/0 = null
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.642788, 0.439385, -0.627507, 0, 0.819152, 0.573577, 0.766044, 0.368688, -0.526541, -4, 10, -6 )
-projection = 1
-current = true
-size = 15.0
-
-[node name="Camera2" type="Camera" parent="."]
-transform = Transform( -1, 0, 0, 0, 0.819152, 0.573577, 0, 0.573577, -0.819152, 4, 5, 0 )
+transform = Transform( -0.707107, 0.5, -0.5, -6.18172e-08, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -3, 4, -3 )
+visible = false
 projection = 1
 size = 15.0
 
-[node name="Control" parent="." instance=ExtResource( 7 )]
+[node name="death_area" parent="." instance=ExtResource( 4 )]
+transform = Transform( 15, 0, 0, 0, 1, 0, 0, 0, 15, 2, -3, 0 )
